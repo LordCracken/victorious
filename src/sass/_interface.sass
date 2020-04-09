@@ -1,3 +1,7 @@
+.container
+  margin: auto
+  width: 100%
+  max-width: 1140px
 .link
   text-decoration: none
   &__icon
@@ -12,4 +16,42 @@
     &--menu
       display: none
 .button
+  border: none
   cursor: pointer
+.menu-button
+  position: relative
+  width: 24px
+  height: 3px
+  background-color: #ffffff
+  &::before
+    content: ""
+    position: absolute
+    bottom: 7px
+    left: 0
+    width: 24px
+    height: 3px
+    background-color: #ffffff
+  &::after
+    content: ""
+    position: absolute
+    top: 7px
+    left: 0
+    width: 24px
+    height: 3px
+    background-color: #ffffff
+@media (min-width: 768px)
+  .menu-button
+    display: none
+@media (min-width: 992px)
+  .link
+    &__text
+      &--menu
+        display: inline-block
+        margin-left: 5px
+        font-size: 15px
+        color: $header-text
+    &__icon
+      background-color: transparent
+      >i
+        font-size: 17px
+        color: $header-text

@@ -1,8 +1,85 @@
 .header
-  font-family: 'Roboto Light', sans-serif
+  display: flex
+  align-items: center
+  padding: 13px 15px 13px
+  background-color: $main-bg
+  font-family: "Roboto Light", sans-serif
+  &-content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 30px
   &__link
-    display: inline-block
+    display: inline-flex
+    align-items: center
+    margin-right: 5px
+    &:last-child
+      margin: 0
+.nav
+  display: none
 .consultation-block
+  display: flex
+  align-items: center
   &__text
+    margin-right: 7px
     font-size: 13px
     color: $header-text
+@media (min-width: 768px)
+  .nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__link
+      border-right: 1px dotted #888888
+      padding: 5px
+      padding-left: 4px
+      font-family: "Roboto Light", sans-serif
+      color: $light-text
+      &:first-child
+        padding-left: 0
+      &:last-child
+        border: none
+        padding-right: 0
+@media (min-width: 992px)
+  .header
+    padding-top: 10px
+    padding-bottom: 10px
+    &__link
+      margin-right: 8px
+      &:hover
+        .link
+          &__text
+            position: relative
+            &::after
+              position: absolute
+              bottom: -1px
+              left: 0
+              content: ""
+              width: 100%
+              height: 1px
+              background-color: $header-text
+  .nav
+    &__link
+      &:hover
+        color: $bright-text
+        >span
+          position: relative
+          &::after
+            position: absolute
+            bottom: -1px
+            left: 0
+            content: ""
+            width: 100%
+            height: 1px
+            background-color: $bright-text
+  .consultation-block
+    &__text
+      margin-right: 4px
+      font-size: 14px
+@media (min-width: 1200px)
+  .header
+    padding: 10px 0
+  .nav
+    &__link
+      padding: 5px 15px
+      padding-left: 11px
