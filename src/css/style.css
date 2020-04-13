@@ -6397,6 +6397,7 @@ readers do not read off random characters that represent icons */
 }
 
 html {
+  font-family: "Roboto Light", sans-serif;
   font-size: 14px;
 }
 
@@ -6421,7 +6422,7 @@ html {
 }
 
 .link__icon > i {
-  font-size: 16px;
+  font-size: 1.14286rem;
 }
 
 .link__text--menu {
@@ -6430,7 +6431,10 @@ html {
 
 .button {
   border: none;
+  border-radius: 30px;
   cursor: pointer;
+  background-color: #FFD801;
+  font-family: "Roboto Bold" ,sans-serif;
 }
 
 .menu-button {
@@ -6460,6 +6464,10 @@ html {
   background-color: #ffffff;
 }
 
+.menu-button .image {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .menu-button {
     display: none;
@@ -6470,21 +6478,36 @@ html {
   .link__text--menu {
     display: inline-block;
     margin-left: 5px;
-    font-size: 15px;
+    font-size: 1.0714rem;
     color: #43BBB8;
   }
   .link__icon {
     background-color: transparent;
   }
   .link__icon > i {
-    font-size: 17px;
+    font-size: 1.2143rem;
     color: #43BBB8;
+  }
+  .button:hover {
+    background-color: #ffb201;
   }
 }
 
 @font-face {
   font-family: "Roboto Light";
   src: url("../fonts/Roboto-Light.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  src: url("../fonts/Roboto-Black.ttf");
   font-display: swap;
 }
 
@@ -6542,7 +6565,7 @@ html {
 
 .consultation-block__text {
   margin-right: 7px;
-  font-size: 13px;
+  font-size: 0.9286;
   color: #43BBB8;
 }
 
@@ -6611,7 +6634,7 @@ html {
   }
   .consultation-block__text {
     margin-right: 4px;
-    font-size: 14px;
+    font-size: 1rem;
   }
 }
 
@@ -6622,5 +6645,194 @@ html {
   .nav__link {
     padding: 5px 15px;
     padding-left: 11px;
+  }
+}
+
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.about-us-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.about-us__link {
+  margin-right: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2B2B2B;
+}
+
+.about-us__button {
+  padding: 13px 15px;
+  font-size: 12px;
+}
+
+.about-us__contact-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 6px;
+}
+
+.logotype {
+  width: 100%;
+}
+
+.logotype--desktop {
+  display: none;
+}
+
+.logotype-block {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.logotype-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+}
+
+.logotype__text {
+  margin-left: 15px;
+  max-width: 190px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.logotype__image-block {
+  margin-left: 5px;
+  width: 100%;
+  max-width: 55px;
+}
+
+.work-time {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .about-us-content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-us__contact-block {
+    padding-left: 0;
+  }
+  .work-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 50px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .work-time__head {
+    display: block;
+    font-family: "Roboto Bold" ,sans-serif;
+  }
+}
+
+@media (min-width: 820px) {
+  .about-us-content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .logotype-block {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    margin: 0;
+    border: none;
+    padding-bottom: 0;
+  }
+  .work-time {
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 77px;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-us__link {
+    margin-right: 17px;
+    font-family: "Roboto Bold" ,sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+  }
+  .about-us__link:hover {
+    position: relative;
+  }
+  .about-us__link:hover::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+  }
+  .about-us__button {
+    padding: 16px 25px;
+    font-size: 14px;
+  }
+  .logotype__text {
+    font-size: 16px;
+  }
+  .work-time {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logotype {
+    display: none;
+  }
+  .logotype--desktop {
+    display: block;
+  }
+  .logotype__image-block {
+    max-width: 227px;
+  }
+  .logotype__text {
+    margin-left: 25px;
   }
 }
