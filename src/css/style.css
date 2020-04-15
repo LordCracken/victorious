@@ -6401,6 +6401,10 @@ html {
   font-size: 14px;
 }
 
+::-moz-placeholder, :-moz-placeholder {
+  opacity: 1;
+}
+
 .container {
   margin: auto;
   width: 100%;
@@ -6434,7 +6438,65 @@ html {
   border-radius: 30px;
   cursor: pointer;
   background-color: #FFD801;
-  font-family: "Roboto Bold" ,sans-serif;
+  font-family: "Roboto Bold", sans-serif;
+}
+
+.form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #999999;
+  border-bottom: 0;
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: #999999;
+}
+
+.form::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  background-color: #999999;
+}
+
+.input {
+  border: none;
+  border-radius: 30px;
+  padding: 16px 50px;
+  padding-right: 0;
+  width: 100%;
+  font-family: "Roboto Thin", sans-serif;
+  color: #606060;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #7B7B7B;
 }
 
 .menu-button {
@@ -6506,8 +6568,20 @@ html {
 }
 
 @font-face {
-  font-family: "Roboto Black";
-  src: url("../fonts/Roboto-Black.ttf");
+  font-family: "Roboto Medium";
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("../fonts/Roboto-Thin.ttf");
   font-display: swap;
 }
 
@@ -6653,12 +6727,16 @@ html {
   display: -ms-flexbox;
   display: flex;
   padding: 10px;
+  padding-bottom: 0;
 }
 
 .about-us-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 10px;
@@ -6666,8 +6744,8 @@ html {
 
 .about-us__link {
   margin-right: 12px;
+  font-family: "Roboto Bold", sans-serif;
   font-size: 18px;
-  font-weight: bold;
   color: #2B2B2B;
 }
 
@@ -6791,6 +6869,10 @@ html {
 }
 
 @media (min-width: 992px) {
+  .about-us {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .about-us__link {
     margin-right: 17px;
     font-family: "Roboto Bold" ,sans-serif;
@@ -6834,5 +6916,175 @@ html {
   }
   .logotype__text {
     margin-left: 25px;
+  }
+}
+
+.our-offer {
+  padding: 37px 21px 40px;
+  background: url("../img/our-offer/our-offer-bg.jpeg") center/cover;
+}
+
+.our-offer-text {
+  text-align: center;
+  color: #ffffff;
+}
+
+.our-offer__main-heading {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Medium", sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  color: #FFD801;
+  line-height: 21px;
+}
+
+.our-offer__paragraph {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "Roboto Regular", sans-serif;
+}
+
+.our-offer__paragraph:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.our-offer__paragraph:nth-child(4) {
+  display: none;
+}
+
+.our-offer__characteristics {
+  display: none;
+}
+
+.our-offer__form {
+  display: none;
+}
+
+.our-offer__button {
+  margin-top: 34px;
+  padding: 13px 40px;
+  max-width: 248px;
+}
+
+@media (min-width: 576px) {
+  .our-offer__paragraph:nth-child(3) {
+    margin-bottom: 10px;
+  }
+  .our-offer__paragraph:nth-child(4) {
+    display: block;
+    margin: auto;
+    max-width: 742px;
+  }
+}
+
+@media (min-width: 992px) {
+  .our-offer {
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+  .our-offer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .our-offer-text {
+    margin-right: 32px;
+    text-align: left;
+  }
+  .our-offer__paragraph {
+    margin-bottom: 5px;
+    line-height: 22px;
+  }
+  .our-offer__paragraph:nth-child(4) {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .our-offer__button {
+    display: none;
+  }
+  .our-offer__characteristics {
+    display: block;
+  }
+  .our-offer__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 40px 30px 50px;
+    -webkit-transform: translateY(-18px);
+            transform: translateY(-18px);
+    min-width: 360px;
+    max-height: 211px;
+  }
+  .our-offer__form::before {
+    width: 25px;
+  }
+  .our-offer__form::after {
+    width: 25px;
+  }
+  .our-offer__input-container {
+    margin-bottom: 20px;
+    width: 302px;
+  }
+  .our-offer__input-container:first-child {
+    margin-bottom: 15px;
+  }
+  .our-offer__submit {
+    display: inline-block;
+    padding: 17px 48px;
+    max-width: 273px;
+    font-size: 15px;
+  }
+  .characteristics__point {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    margin-bottom: 14px;
+    font-family: "Roboto Light", sans-serif;
+  }
+  .characteristics__point:last-child {
+    margin-bottom: 0;
+  }
+  .characteristics__heading {
+    display: inline-block;
+    margin-right: 17px;
+    -ms-flex-preferred-size: 87px;
+        flex-basis: 87px;
+    font-family: "Roboto Bold", sans-serif;
+    color: #FFD801;
+  }
+  .characteristics__description {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .our-offer-text {
+    font-size: 16px;
+  }
+  .our-offer__main-heading {
+    margin-bottom: 18px;
+    font-size: 43px;
+    line-height: 43px;
+  }
+  .our-offer__paragraph {
+    font-family: "Roboto Light", sans-serif;
+  }
+  .our-offer__paragraph:nth-child(4) {
+    max-width: inherit;
+  }
+  .characteristics__description {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
 }

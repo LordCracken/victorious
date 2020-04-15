@@ -1,14 +1,16 @@
 .about-us
   display: flex
   padding: 10px
+  padding-bottom: 0
   &-content
     display: flex
+    justify-content: center
     flex-wrap: wrap
     padding-bottom: 10px
   &__link
     margin-right: 12px
+    font-family: "Roboto Bold", sans-serif
     font-size: 18px
-    font-weight: bold
     color: #2B2B2B
   &__button
     padding: 13px 15px
@@ -79,6 +81,8 @@
     height: 77px
 @media (min-width: 992px)
   .about-us
+    padding-right: 20px
+    padding-left: 20px
     &__link
       margin-right: 17px
       font-family: "Roboto Bold" ,sans-serif

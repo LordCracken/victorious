@@ -11,7 +11,19 @@
 }
 
 @font-face {
-  font-family: "Roboto Black";
-  src: url('../fonts/Roboto-Black.ttf');
+  font-family: "Roboto Medium";
+  src: url('../fonts/Roboto-Medium.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url('../fonts/Roboto-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Thin";
+  src: url('../fonts/Roboto-Thin.ttf');
   font-display: swap;
 }
