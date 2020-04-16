@@ -2,6 +2,14 @@
   margin: auto
   width: 100%
   max-width: 1140px
+.section-heading
+  margin: 0
+  text-align: center
+  text-transform: uppercase
+  font-family: "Roboto Bold" ,sans-serif
+  font-weight: normal
+  font-size: 20px
+  color: #243342
 .link
   text-decoration: none
   &__icon
@@ -62,6 +70,7 @@
     color: #7B7B7B
 .menu-button
   position: relative
+  border-radius: none
   width: 24px
   height: 3px
   background-color: #ffffff
@@ -81,12 +90,31 @@
     width: 24px
     height: 3px
     background-color: #ffffff
-  .image
-    width: 100%
+.image
+  width: 100%
+.arrow-prev
+  position: absolute
+  display: inline-block
+  width: 17px
+  height: 50px
+  background-image: url("../img/ui/arrow-left.png")
+  opacity: 0.2
+  z-index: 1
+.arrow-next
+  position: absolute
+  display: inline-block
+  width: 17px
+  height: 50px
+  background-image: url("../img/ui/arrow-right.png")
+  opacity: 0.2
+  z-index: 1
 @media (min-width: 768px)
   .menu-button
     display: none
 @media (min-width: 992px)
+  .section-heading
+    font-family: "Roboto Medium", sans-serif
+    font-size: 30px
   .link
     &__text
       &--menu
