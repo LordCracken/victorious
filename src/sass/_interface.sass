@@ -3,6 +3,7 @@
   width: 100%
   max-width: 1140px
 .section-heading
+  position: relative
   margin: 0
   text-align: center
   text-transform: uppercase
@@ -115,7 +116,25 @@
   .section-heading
     font-family: "Roboto Medium", sans-serif
     font-size: 30px
-  .link
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-299px ,-6px)
+      width: 165px
+      height: 12px
+      background-image: url("../img/ui/section-heading-line.png")
+    &::after
+      content: ""
+      position: absolute
+      top: 50%
+      right: 50%
+      transform: translate(299px ,-6px) rotate(180deg)
+      width: 165px
+      height: 12px
+      background-image: url("../img/ui/section-heading-line.png")
+    .link
     &__text
       &--menu
         display: inline-block

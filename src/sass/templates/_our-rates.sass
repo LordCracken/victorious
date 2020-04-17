@@ -84,13 +84,22 @@
     padding-top: 67px
     padding-bottom: 55px
     &__heading
-      margin-bottom: 37px
+      margin-bottom: 32px
   .rate
     &:hover
       border-width: 2px
-      padding-right: 15px
-      padding-left: 15px
+      padding: 13px 16px 19px
       border-color: orange
       -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5)
       -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5)
       box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5)
+@media (min-width: 1200px)
+  .rate
+    padding: 20px 20px 18px
+    &:hover
+      padding: 19px 19px 17px
+    &__heading
+      margin-bottom: 32px
+      font-size: 26px
+      &::after
+        bottom: -16px
