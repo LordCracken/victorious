@@ -114,14 +114,15 @@
     display: none
 @media (min-width: 992px)
   .section-heading
+    margin: auto
     font-family: "Roboto Medium", sans-serif
     font-size: 30px
     &::before
       content: ""
       position: absolute
       top: 50%
-      left: 50%
-      transform: translate(-299px ,-6px)
+      left: 0
+      transform: translateY(-6px)
       width: 165px
       height: 12px
       background-image: url("../img/ui/section-heading-line.png")
@@ -129,8 +130,8 @@
       content: ""
       position: absolute
       top: 50%
-      right: 50%
-      transform: translate(299px ,-6px) rotate(180deg)
+      right: 0
+      transform: translateY(-6px) rotate(180deg)
       width: 165px
       height: 12px
       background-image: url("../img/ui/section-heading-line.png")
