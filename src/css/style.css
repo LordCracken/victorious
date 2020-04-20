@@ -6663,6 +6663,10 @@ html {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6670,6 +6674,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   padding: 13px 15px 13px;
+  width: 100%;
   background-color: #1B2631;
   font-family: "Roboto Light", sans-serif;
 }
@@ -6803,6 +6808,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 56px;
   padding: 10px;
   padding-bottom: 0;
 }
@@ -6948,6 +6954,7 @@ html {
 
 @media (min-width: 992px) {
   .about-us {
+    margin-top: 50px;
     padding-right: 20px;
     padding-left: 20px;
   }
