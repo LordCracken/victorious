@@ -1,0 +1,145 @@
+.cost
+  padding: 41px 19px 26px
+  &-content
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-item
+    display: flex
+    color: #369A97
+    &--hidden
+      display: none
+    &s
+      &__item
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+    &__heading
+      margin-top: 5px
+      margin-bottom: 5px
+      font-family: "Roboto Black", sans-serif
+      font-size: 15px
+      font-weight: normal
+    &__list
+      margin: 0
+      padding-left: 18px
+      &-text
+        font-size: 14px
+        color: #243342
+      &-item
+        margin-bottom: 7px
+        max-width: 557px
+        font-size: 18px
+        line-height: 0.8
+        &:last-child
+          margin-bottom: 0
+    &__image-container
+      margin-right: 10px
+      width: 100%
+      max-width: 61px
+  &__image
+    &--1
+      max-width: 54px
+    &--3
+      max-width: 59px
+    &--4 
+      max-width: 44px
+    &--5
+      max-width: 57px
+    &--6
+      max-width: 59px
+  &__heading
+    margin-bottom: 13px
+  &__text
+    margin: 0
+    margin-top: 20px
+    max-width: 700px
+    text-align: center
+    font-family: "Roboto Regular", sans-serif
+    color: #243342
+    &:nth-child(2)
+      margin-top: 0
+      margin-bottom: 14px
+      max-width: inherit
+  &__more
+    position: relative
+    margin-top: 20px
+    margin-bottom: 16px
+    border: none
+    padding: 0
+    width: 30px
+    height: 9px
+    cursor: pointer
+    background: none
+    &--active
+      transform: rotate(180deg)
+    &::before
+      content: ""
+      position: absolute
+      top: 4px
+      left: 0
+      width: 17px
+      height: 2px
+      background-color: $header-text
+      transform: rotate(30deg)
+    &::after
+      content: ""
+      position: absolute
+      top: 4px
+      right: 0
+      width: 17px
+      height: 2px
+      background-color: $header-text
+      transform: rotate(-30deg)
+  &__button
+    padding: 21px 38px
+    font-size: 15px
+@media (min-width: 992px)
+  .cost
+    padding-top: 69px
+    padding-bottom: 54px
+    &-item
+      flex-basis: 49%
+      align-items: center
+      &s
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        flex-wrap: wrap
+        &__item
+          margin-bottom: 46px
+          &:nth-child(5)
+            margin-bottom: 0
+      &__image-container
+        max-width: 77px
+      &__heading
+        margin-top: 0
+        font-size: 17px
+      &__list
+        &-text
+          font-size: 15px
+    &__heading
+      margin-bottom: 20px  
+      width: 775px
+    &__image
+      &--1
+        max-width: 68px
+      &--3
+        max-width: 77px
+      &--4
+        max-width: 57px
+      &--5
+        max-width: 75px
+      &--6
+        max-width: 76px
+    &__text
+      margin-top: 44px
+      font-size: 16px
+      &:nth-child(2)
+        margin-bottom: 43px
+        font-size: 18px
+      &--min-mod
+        margin-top: 0
+    &__more
+      margin-top: 14px
+      margin-bottom: 19px

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   const ourRatesSlider = new Swiper('.our-rates__slider', {
     // Optional parameters
     loop: true,
