@@ -7563,8 +7563,13 @@ html {
   color: #369A97;
 }
 
-.cost-item--hidden {
-  display: none;
+.cost-items {
+  max-height: 246px;
+  overflow: hidden;
+}
+
+.cost-items--extended {
+  max-height: inherit !important;
 }
 
 .cost-items__item {
@@ -7695,6 +7700,60 @@ html {
   font-size: 15px;
 }
 
+@media (min-width: 350px) {
+  .cost-items {
+    max-height: 230px;
+  }
+}
+
+@media (min-width: 356px) {
+  .cost-items {
+    max-height: 222px;
+  }
+}
+
+@media (min-width: 373px) {
+  .cost-items {
+    max-height: 202px;
+  }
+}
+
+@media (min-width: 393px) {
+  .cost-items {
+    max-height: 185px;
+  }
+}
+
+@media (min-width: 443px) {
+  .cost-items {
+    max-height: 182px;
+  }
+}
+
+@media (min-width: 445px) {
+  .cost-items {
+    max-height: 176px;
+  }
+}
+
+@media (min-width: 555px) {
+  .cost-items {
+    max-height: 160px;
+  }
+}
+
+@media (min-width: 560px) {
+  .cost-items {
+    max-height: 150px;
+  }
+}
+
+@media (min-width: 569px) {
+  .cost-items {
+    max-height: 147px;
+  }
+}
+
 @media (min-width: 992px) {
   .cost {
     padding-top: 69px;
@@ -7719,6 +7778,7 @@ html {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    max-height: 120px;
   }
   .cost-items__item {
     margin-bottom: 46px;
@@ -7735,6 +7795,7 @@ html {
   }
   .cost-item__list-text {
     font-size: 15px;
+    line-height: 1.2;
   }
   .cost__heading {
     margin-bottom: 20px;
