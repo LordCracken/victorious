@@ -28,5 +28,19 @@ $(document).ready(function () {
         allowTouchMove: false
       }
     }
-  });
+  }),
+
+    portfolioSlider = new Swiper('.portfolio__slider', {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.portfolio__arrow-next',
+        prevEl: '.portfolio__arrow-prev',
+      },
+      breakpoints: {
+        992: {
+          spaceBetween: 60
+        }
+      }
+    });
 });

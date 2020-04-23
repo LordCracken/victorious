@@ -1,0 +1,131 @@
+.portfolio
+  position: relative
+  padding: 35px 17px 0
+  background: url("../img/portfolio/portfolio-bg-image.jpeg") center/cover
+  overflow: hidden
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #243342
+    opacity: 0.9
+  &-content
+    >*, *::before, *::after
+      z-index: 1
+  &__slider-container
+    display: flex
+    justify-content: center
+    margin: auto
+    max-width: 664px
+    border-radius: 15px 15px 0 0
+    overflow: hidden
+  &__heading
+    margin-bottom: 20px
+  &__slider
+    position: relative
+    width: 100%
+    max-width: 654px
+  &__arrow-prev--mobile
+    top: 50%
+    left: 0
+    transform: translateX(-2px)
+  &__arrow-next--mobile
+    top: 50%
+    right: 0
+    transform: translateX(2px)
+.project
+  &-data
+    padding: 15px 20px
+    padding-top: 0
+    background-color: #F0F0F0
+    border-spacing: 0
+    width: 100%
+    line-height: 16px
+    font-size: 8px
+    &__row
+      &:first-child
+        position: relative
+        line-height: 32px
+        &::after
+          content: ""
+          position: absolute
+          bottom: 0
+          left: 0
+          height: 2px
+          width: 100%
+          background-color: #DFDFDF
+      &:nth-child(even)
+        background-color: #ECECEC
+    &__cell
+      text-align: center
+      &:first-child
+        text-align: left
+      &:nth-child(3)
+        width: 27%
+    &__heading
+      text-align: center
+      font-family: "Roboto Medium", sans-serif
+      font-size: 13px
+      font-weight: normal
+      &:first-child
+        text-align: left
+  &__header
+    display: flex
+    flex-direction: column
+    align-items: center
+    border-radius: 15px 15px 0 0
+    padding-top: 10px
+    padding-bottom: 18px
+    background-color: #ffffff
+  &__company-name
+    font-family: "Roboro Medium", sans-serif
+  &__link
+    font-family: "Roboto Medium", sans-serif
+    color: #369A97
+@media (min-width: 425px)
+  .project
+    &-data
+      font-size: 10px
+    &__heading
+      font-size: 15px
+@media (min-width: 576px)
+  .project
+    &__header
+      flex-direction: row
+      justify-content: space-between
+      padding-right: 25px
+      padding-bottom: 8px
+      padding-left: 20px
+    &-data
+      line-height: 24px
+      font-size: 12px
+      &__heading
+        line-height: 30px
+        font-size: 15px
+@media (min-width: 992px)
+  .portfolio
+    padding-top: 45px
+    &__heading
+      width: 762px
+    &__slider-container
+      max-width: 770px
+    &__arrow-prev--mobile, &__arrow-next--mobile
+      display: none
+    &__arrow-prev
+      top: 50%
+      left: -50px
+      z-index: 3
+    &__arrow-next
+      top: 50%
+      right: -50px
+      z-index: 3
+  .project
+    &-data
+      padding-right: 50px
+      padding-left: 50px
+    &__link
+      &:hover
+        color: $bright-text

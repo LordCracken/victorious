@@ -103,6 +103,8 @@
   background-image: url("../img/ui/arrow-left.png")
   opacity: 0.2
   z-index: 1
+  &--desktop
+    display: none
 .arrow-next
   position: absolute
   display: inline-block
@@ -111,6 +113,8 @@
   background-image: url("../img/ui/arrow-right.png")
   opacity: 0.2
   z-index: 1
+  &--desktop
+    display: none
 @media (min-width: 768px)
   .menu-button
     display: none
@@ -152,3 +156,61 @@
   .button
     &:hover
       background-color: adjust-hue($bright-color, -9)
+  .arrow-prev
+    &--desktop
+      display: block
+      position: absolute
+      border: none
+      padding: 0
+      width: 15px
+      height: 55px
+      cursor: pointer
+      background: none
+      >.arrow-icon
+        &::before
+          content: ""
+          position: absolute
+          top: 25%
+          left: -50%
+          width: 30px
+          height: 2px
+          background-color: $bright-color
+          transform: rotate(120deg)
+        &::after
+          content: ""
+          position: absolute
+          bottom: 25%
+          left: -50%
+          width: 30px
+          height: 2px
+          background-color: $bright-color
+          transform: rotate(-120deg)
+  .arrow-next
+    &--desktop
+      display: block
+      position: absolute
+      border: none
+      padding: 0
+      width: 15px
+      height: 55px
+      cursor: pointer
+      background: none
+      >.arrow-icon
+        &::before
+          content: ""
+          position: absolute
+          top: 25%
+          left: -50%
+          width: 30px
+          height: 2px
+          background-color: $bright-color
+          transform: rotate(-120deg)
+        &::after
+          content: ""
+          position: absolute
+          bottom: 25%
+          left: -50%
+          width: 30px
+          height: 2px
+          background-color: $bright-color
+          transform: rotate(120deg)
