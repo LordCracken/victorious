@@ -42,5 +42,23 @@ $(document).ready(function () {
           spaceBetween: 60
         }
       }
+    }),
+
+    callBackSlider = new Swiper('.call-back__slider', {
+      loop: true,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.call-back__arrow-next',
+        prevEl: '.call-back__arrow-prev',
+      },
+      breakpoints: {
+        992: {
+          autoplay: false
+        }
+      }
     });
 });

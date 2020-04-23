@@ -1,0 +1,82 @@
+.call-back
+  padding: 38px 15px 24px
+  text-align: justify
+  color: #464646
+  &-slider-container
+    overflow: hidden
+  &__heading
+    margin-bottom: 21px
+  &__slider
+    position: relative
+  &__images-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: auto
+    margin-bottom: 18px
+    max-width: 290px
+  &__customer-photo-container
+    max-width: 89px
+    max-height: 89px
+  &__logo-container
+    border: 1px solid #dddddd
+    padding: 25px
+    padding-left: 30px
+    width: 184px
+    height: 94px
+  &__text-box
+    margin: auto
+    max-width: 500px
+  &__customer-name
+    margin-bottom: 5px
+    text-align: center
+    color: #369A97
+  &__customer-place
+    margin-bottom: 5px
+    text-align: center
+  &__arrow-prev
+    display: none
+  &__arrow-next
+    display: none
+@media (min-width: 992px)
+  .call-back
+    padding-top: 65px
+    padding-bottom: 73px
+    line-height: 1.6
+    font-size: 16px
+    &-slide
+      display: flex
+      padding-right: 48px
+      padding-left: 48px
+    &__heading
+      margin-bottom: 48px
+      max-width: 655px
+    &__images-box
+      flex-direction: column
+      margin-right: 20px
+    &__customer-photo-container
+      margin-bottom: 15px
+      max-width: 111px
+      max-height: 111px
+    &__logo-container
+      padding: 29px
+      padding-right: 12px
+      padding-left: 21px
+      width: 174px
+      height: 105px
+    &__text-box
+      max-width: inherit
+    &__customer-name
+      text-align: left
+    &__customer-place
+      text-align: left
+    &__arrow-prev
+      display: block
+      top: 50%
+      left: 1px
+      transform: translateY(-27px)
+    &__arrow-next
+      display: block
+      top: 50%
+      right: 1px
+      transform: translateY(-27px)
