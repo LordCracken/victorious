@@ -8688,3 +8688,104 @@ html {
     display: block;
   }
 }
+
+.footer {
+  padding: 18px 88px;
+  background-color: #243342;
+  color: #ffffff;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__logo-container {
+  display: block;
+  width: 100%;
+  max-width: 147px;
+}
+
+.footer__text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__text {
+    display: block;
+    max-width: 356px;
+    line-height: 1.6;
+  }
+  .footer__row {
+    display: block;
+  }
+  .footer__link {
+    color: #369A97;
+    text-decoration: underline;
+  }
+  .footer__links-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer__text {
+    width: 100%;
+    max-width: 564px;
+  }
+  .footer__link:hover {
+    text-decoration: none;
+  }
+  .footer__links-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 7px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding-top: 42px;
+    padding-bottom: 49px;
+  }
+  .footer-content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer__logo-container {
+    margin-right: 220px;
+    max-width: 227px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__logo-container {
+    margin-right: 262px;
+  }
+}

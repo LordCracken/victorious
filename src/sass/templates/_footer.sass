@@ -1,0 +1,56 @@
+.footer
+  padding: 18px 88px
+  background-color: $footer-bg
+  color: $light-text
+  &-content
+    display: flex
+    justify-content: center
+  &__logo-container
+    display: block
+    width: 100%
+    max-width: 147px
+  &__text
+    display: none
+@media (min-width: 768px)
+  .footer
+    &-content
+      justify-content: space-around
+      align-items: center
+    &__text
+      display: block
+      max-width: 356px
+      line-height: 1.6
+    &__row
+      display: block
+    &__link
+      color: #369A97
+      text-decoration: underline
+      &s-block
+        display: flex
+        flex-direction: column
+@media (min-width: 992px)
+  .footer
+    &__text
+      width: 100%
+      max-width: 564px
+    &__link
+      &:hover
+        text-decoration: none
+      &s-block
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-bottom: 7px
+@media (min-width: 1200px)
+  .footer
+    padding-top: 42px
+    padding-bottom: 49px
+    &-content
+      justify-content: flex-start
+    &__logo-container
+      margin-right: 220px
+      max-width: 227px
+@media (min-width: 1440px)
+  .footer
+    &__logo-container
+      margin-right: 262px
