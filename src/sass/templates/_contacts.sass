@@ -1,0 +1,141 @@
+.contacts
+  padding: 30px 15px 18px
+  color: #3B3B3B
+  &-container
+    display: flex
+    flex-direction: column
+  &-block
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 22px
+    max-width: 287px
+    &__heading
+      flex-basis: 100%
+      margin-bottom: 10px
+      font-family: "Roboto Medium", sans-serif
+      font-size: 17px
+      font-weight: normal
+      color: #369A97
+    &:nth-child(2)
+      .contacts-block__heading
+        &:last-of-type
+          display: none
+      .contacts__link
+        &:first-of-type
+          flex-basis: 100%
+          margin-bottom: 5px
+          .contacts__icons-container
+            width: 60px
+        &:last-of-type
+          margin-left: 16px
+    &:last-child
+      margin-bottom: 0
+  &__icons-container
+    display: inline-flexbox
+    justify-content: space-between
+    font-size: 18px
+    color: #369A97
+  &__heading
+    margin-bottom: 23px
+  &__phone-block
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__link
+    display: flex
+    align-items: center
+    font-size: 15px
+    color: inherit
+    .link__text
+      position: relative
+      margin-left: 6px
+      font-family: "Roboto Regular", sans-serif
+      &::after
+        content: ""
+        position: absolute
+        bottom: -1px
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: #bbbbbb
+        transition: 0.5s
+        z-index: -1
+  &__phone
+    margin-bottom: 11px
+    font-family: "Roboto Bold", sans-serif
+    font-size: 20px
+    &-text
+      margin-left: 9px
+      font-family: "Roboto Bold", sans-serif
+  &__button
+    padding: 17px 24px
+  &__text
+    margin-left: 8px
+    max-width: 265px
+    font-family: "Roboto Regular", sans-serif
+    line-height: 1.4
+  &__map
+    display: none
+@media (min-width: 375px)
+  .contacts
+    &-container
+      align-items: center
+@media (min-width: 640px)
+  .contacts
+    &-container
+      flex-direction: row
+      align-items: start
+      justify-content: center
+      flex-wrap: wrap
+    &-block
+      &:first-child
+        flex-basis: 100%
+        max-width: inherit
+@media (min-width: 900px)
+  .contacts
+    &-container
+      justify-content: space-around
+    &-block
+      margin-bottom: 0
+      &:first-child
+        flex-basis: auto
+@media (min-width: 992px)
+  .contacts
+    padding: 0
+    padding-top: 49px
+    &-content
+      padding-bottom: 50px
+    &-block
+      &:nth-child(2)
+        max-width: 316px
+        .contacts-block__heading
+          &:first-child
+            display: none
+          &:nth-child(2)
+            display: block
+    &__heading
+      margin-bottom: 45px
+      max-width: 522px
+    &__link
+      &:hover
+        .contacts__phone
+          &-text
+            text-decoration: underline
+    &__phone
+      position: relative
+      &:hover
+        &::after
+          position: absolute
+          bottom: -1px
+          left: 0
+          content: ""
+          width: 100%
+          height: 2px
+          background-color: #3B3B3B
+    &__link
+      .link__text
+        &:hover
+          &::after
+            width: 0
+    &__map
+      display: block
