@@ -21,7 +21,7 @@ ymaps.ready(function () {
       // Своё изображение иконки метки.
       iconImageHref: 'img/map-token.png',
       // Размеры метки.
-      iconImageSize: [19, 31],
+      iconImageSize: [39, 62],
       // Смещение левого верхнего угла иконки относительно
       // её "ножки" (точки привязки).
       iconImageOffset: [-5, -38]

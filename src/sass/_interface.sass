@@ -81,6 +81,7 @@
   width: 24px
   height: 3px
   background-color: #ffffff
+  z-index: 7
   &::before
     content: ""
     position: absolute
@@ -97,6 +98,37 @@
     width: 24px
     height: 3px
     background-color: #ffffff
+  &--active
+    background-color: $bright-color
+    &::before, &::after
+      background-color: $bright-color
+.close-button
+  position: relative
+  border: none
+  width: 17px
+  height: 18px
+  background: none
+  cursor: pointer
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 20px
+    height: 3px
+    transform: rotate(45deg) translate(7px, 7px)
+    background-color: #ffffff
+    cursor: pointer
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 20px
+    height: 3px
+    transform: rotate(-45deg) translate(-7px, 7px)
+    background-color: #ffffff
+    cursor: pointer
 .image
   width: 100%
 .arrow-prev
@@ -119,8 +151,8 @@
   z-index: 1
   &--desktop
     display: none
-@media (min-width: 768px)
-  .menu-button
+@media (min-width: 794px)
+  .menu-button, .close-button
     display: none
 @media (min-width: 992px)
   .section-heading

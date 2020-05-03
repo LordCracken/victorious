@@ -9,4 +9,15 @@ $(document).ready(function () {
   $('.questions__question').on('click', () => {
     $(event.target).next('.questions__answer').toggleClass('questions__answer--opened');
   });
+  // Бургер-меню
+  $('.menu-button').on('click', () => {
+    $(event.target).toggleClass('menu-button--active');
+    $('.header').toggleClass('header--opened-menu');
+    $('.nav').toggleClass('nav--active');
+  });
+  $('.close-button').on('click', () => {
+    $('.header').removeClass('header--opened-menu');
+    $('.nav').removeClass('nav--active');
+    $('.menu-button').removeClass('menu-button--active');
+  });
 });

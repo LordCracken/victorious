@@ -2,13 +2,24 @@
   position: fixed
   top: 0
   left: 0
-  z-index: 5
+  z-index: 4
   display: flex
   align-items: center
   padding: 13px 15px 13px
   width: 100%
   background-color: $main-bg
   font-family: "Roboto Light", sans-serif
+  &--opened-menu
+    &::after
+      content: ""
+      position: fixed
+      top: 0
+      left: 0
+      width: 100vw
+      height: 100vh
+      background-color: #000000
+      opacity: 0.7
+      z-index: 5
   &-content
     display: flex
     justify-content: space-between
@@ -21,7 +32,41 @@
     &:last-child
       margin: 0
 .nav
-  display: none
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  flex-direction: column
+  width: 89%
+  height: 100vh
+  transform: translateX(-100%)
+  background-color: #1B2631
+  z-index: 6
+  overflow: hidden
+  transition: 0.5s
+  &__header
+    padding: 18px 18px 21px 14px
+    background-color: #0D151D
+    text-align: right
+  &--active
+    transform: translateX(0)
+  &__link
+    position: relative
+    padding-top: 15px
+    padding-bottom: 15px
+    padding-left: 15px
+    color: $light-text
+    font-size: 15px
+    font-family: "Roboto Regular", sans-serif
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background-color: #555555
+      opacity: 0.3
 .consultation-block
   display: flex
   align-items: center
@@ -29,11 +74,23 @@
     margin-right: 7px
     font-size: 0.9286
     color: $header-text
-@media (min-width: 768px)
+@media (min-width: 794px)
+  .header
+    &--opened-menu
+      &::after
+        display: none
   .nav
+    position: static
     display: flex
+    flex-direction: row
     justify-content: space-between
     align-items: center
+    width: auto
+    height: auto
+    max-width: inherit
+    transform: translateX(0)
+    &__header
+      display: none
     &__link
       border-right: 1px dotted #888888
       padding: 5px
@@ -45,6 +102,8 @@
       &:last-child
         border: none
         padding-right: 0
+      &::after
+        display: none
 @media (min-width: 992px)
   .header
     padding-top: 10px
