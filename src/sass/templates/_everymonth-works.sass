@@ -1,0 +1,60 @@
+.everymonth-works
+  &-modal
+    position: relative
+    align-self: auto
+    max-width: 290px
+    &--hidden
+      display: none
+  &-item
+    display: none
+    font-size: 15px
+    color: #369A97
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+      display: block
+    &:nth-of-type(4)
+      margin-bottom: 0
+    &__heading
+      margin-bottom: 5px
+      margin-left: 10px
+      font-family: "Roboro Regular", sans-serif
+  &-list
+    padding-left: 30px
+  &__list
+    margin-bottom: 15px
+  &__info
+    padding-top: 18px
+    padding-right: 25px
+    padding-bottom: 25px
+    background-color: #ffffff
+  &__text
+    color: #243342
+@media (min-width: 992px)
+  .everymonth-works
+    &-modal
+      margin-top: 50px
+      width: 95%
+      max-width: 1140px
+    &-item
+      &__heading
+        margin-left: 20px
+        font-size: 17px
+    &-list
+      padding-left: 40px
+@media (min-width: 1200px)
+  .everymonth-works
+    &__form-container
+      background: url("../img/our-offer/our-offer-bg.jpeg") center/cover
+      position: absolute
+      top: 145px
+      right: 22px
+    &-item
+      display: block
+      &:nth-of-type(4)
+        margin-bottom: 15px
+      &:nth-of-type(5)
+        max-width: 700px
+      &:last-of-type
+        .everymonth-works-list
+          margin-bottom: 0
+    &__info
+      padding-bottom: 58px

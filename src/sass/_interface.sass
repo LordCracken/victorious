@@ -36,45 +36,6 @@
   background-color: $bright-color
   font-family: "Roboto Bold", sans-serif
   color: #243342
-.form
-  position: relative
-  display: flex
-  flex-direction: column
-  align-items: center
-  border: 1px solid #999999
-  border-bottom: 0
-  &::before
-    content: ""
-    position: absolute
-    bottom: 0
-    left: 0
-    height: 1px
-    background-color: #999999
-  &::after
-    content: ""
-    position: absolute
-    bottom: 0
-    right: 0
-    height: 1px
-    background-color: #999999
-.input
-  border: none
-  border-radius: 30px
-  padding: 16px 50px
-  padding-right: 0
-  width: 100%
-  font-family: "Roboto Thin", sans-serif
-  color: #606060
-  &-container
-    position: relative
-  &-icon
-    position: absolute
-    top: 15px
-    left: 20px
-    width: 20px
-    text-align: center
-    font-size: 20px
-    color: #7B7B7B
 .menu-button
   position: relative
   border-radius: none
@@ -144,13 +105,112 @@
 .arrow-next
   position: absolute
   display: inline-block
-  width: 17px
+  width: 17px 
   height: 50px
   background-image: url("../img/ui/arrow-right.png")
   opacity: 0.2
   z-index: 1
   &--desktop
-    display: none
+    display: none 
+.modal
+  position: relative
+  align-self: center  
+  background-color: #141F2A
+  z-index: 2
+  &-block
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    height: 100vh
+    width: 100vw
+    z-index: 6
+    overflow-y: scroll
+    &::after
+      content: ""
+      position: fixed
+      top: 0
+      left: 0
+      height: 100vh
+      width: 100vw
+      background-color: #000000
+      opacity: 0.7
+    &--hidden
+      display: none
+  &-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 27px 20px 29px
+    &__input-container
+      position: relative
+      margin-bottom: 11px
+      min-width: 252px
+      .input
+        border: none
+        padding: 12px 45px
+        font-size: 12px
+        border-radius: 30px
+        width: 100%
+        color: #606060
+        &-icon
+          position: absolute
+          top: 13px
+          left: 20px
+          font-size: 16px
+          color: #7B7B7B
+      &:last-of-type
+        margin-bottom: 21px
+  &__heading
+    padding: 22px 20px 17px
+    padding-right: 0
+    background-color: $bright-color
+  &__submit
+    padding-top: 20px
+    padding-bottom: 20px
+    width: 100%
+    max-width: 227px
+.close-modal
+  border: none
+  width: 14px
+  height: 14px
+  background: none
+  cursor: pointer
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 16px
+    height: 2px
+    background-color: #000000
+    transform: rotate(45deg) translate(-4px)
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 16px
+    height: 2px
+    background-color: #000000
+    transform: rotate(-45deg) translateY(-4px)
+  &-container
+    position: absolute
+    display: block
+    top: 6px
+    right: 6px
+    width: 14px
+    height: 14px
+.form
+  &__heading
+    padding-top: 23px
+    padding-bottom: 17px
+    text-align: center
+    font-family: "Roboro Medium", sans-serif
+    font-size: 17px
+    background-color: $bright-color
 @media (min-width: 794px)
   .menu-button, .close-button
     display: none
@@ -252,3 +312,89 @@
           height: 2px
           background-color: $bright-color
           transform: rotate(120deg)
+  .form
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    border: 1px solid #999999
+    border-bottom: 0
+    &::before
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 1px
+      background-color: #999999
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      right: 0
+      height: 1px
+      background-color: #999999
+    &__heading
+      padding-top: 26px
+      padding-bottom: 20px
+      font-size: 22px
+      font-weight: normal
+  .input
+    border: none
+    border-radius: 30px
+    padding: 16px 50px
+    padding-right: 0
+    width: 100%
+    font-family: "Roboto Thin", sans-serif
+    color: #606060
+    &-container
+      position: relative
+    &-icon
+      position: absolute
+      top: 15px
+      left: 20px
+      width: 20px
+      text-align: center
+      font-size: 20px
+      color: #7B7B7B
+  .modal
+    background: url("../img/our-offer/our-offer-bg.jpeg") center/cover
+    &-form
+      position: relative
+      padding: 40px 30px 57px
+      &__input-container
+        margin-bottom: 14px
+        min-width: 300px
+        &:last-of-type
+          margin-bottom: 0
+        .input
+          padding: 15px 54px
+          font-size: 14px
+          &-icon
+            top: 17px
+            left: 20px
+      &::before, &::after
+        width: 25px
+    &__form
+      margin: 20px
+      margin-bottom: 62px
+    &__submit
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translate(-137px, 28px)
+      max-width: 273px
+    &__heading
+      padding-top: 25px
+      padding-bottom: 20px
+      padding-left: 34px
+      font-size: 22px
+  .close-modal
+    width: 18px
+    height: 18px
+    &::before, &::after
+      background-color: #ffffff
+      width: 18px
+      height: 3px
+    &-container
+      top: -20px
+      right: -20px
