@@ -5,16 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/victorious.ico" type="image/x-icon">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=4346542a-9b28-45dc-b133-8e6e900b6d07&lang=ru_RU"></script>
   <title>Victorious</title>
 </head>
 
 <body>
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v6.0">
-  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v6.0"></script>
   <header class="header">
     <div class="container">
       <div class="header-content">
@@ -23,12 +22,12 @@
           <div class="nav__header">
             <button class="close-button"></button>
           </div>
-          <a href="#" class="link nav__link"><span>О нас</span></a>
-          <a href="#" class="link nav__link"><span>Тарифы</span></a>
-          <a href="#" class="link nav__link"><span>Вопросы и ответы</span></a>
-          <a href="#" class="link nav__link"><span>Наши проекты</span></a>
-          <a href="#" class="link nav__link"><span>Отзывы</span></a>
-          <a href="#" class="link nav__link"><span>Контакты</span></a>
+          <a href=".about-us" class="link nav__link"><span>О нас</span></a>
+          <a href=".our-rates" class="link nav__link"><span>Тарифы</span></a>
+          <a href=".questions" class="link nav__link"><span>Вопросы и ответы</span></a>
+          <a href=".portfolio" class="link nav__link"><span>Наши проекты</span></a>
+          <a href=".call-back" class="link nav__link"><span>Отзывы</span></a>
+          <a href=".contacts" class="link nav__link"><span>Контакты</span></a>
         </nav>
         <div class="consultation-block header__consultation-block">
           <span class="consultation-block__text">Бесплатная консультация:</span>
@@ -100,13 +99,13 @@
             <button class="button our-offer__button">Получить коммерческое предложение</button>
           </div>
           <!-- /.our-offer-text -->
-          <form action="" class="form our-offer__form">
+          <form action="send.php" method="POST" class="form our-offer__form">
             <div class="input-container our-offer__input-container">
-              <input type="text" placeholder="Ваше имя" class="input our-offer__input">
+              <input type="text" name="name" placeholder="Ваше имя" class="input our-offer__input">
               <i class="fas fa-user-alt input-icon"></i>
             </div>
             <div class="input-container our-offer__input-container">
-              <input type="text" placeholder="Ваш номер телефона" class="input our-offer__input">
+              <input type="tel" name="phone" placeholder="Ваш номер телефона" class="input our-offer__input">
               <i class="fas fa-mobile-alt input-icon"></i>
             </div>
             <button class="button our-offer__submit">Получить коммерческое предложение</button>
@@ -856,13 +855,13 @@
               </div>
             </div>
             <div class="vk-block social-nets__vk-block">
-              <script type="text/javascript" src="https://vk.com/js/api/openapi.js?167"></script>
+              <script src="https://vk.com/js/api/openapi.js?167"></script>
 
-              <script type="text/javascript" src="https://vk.com/js/api/openapi.js?167"></script>
+              <script src="https://vk.com/js/api/openapi.js?167"></script>
 
               <!-- VK Widget -->
               <div id="vk_groups"></div>
-              <script type="text/javascript">
+              <script async>
                 VK.Widgets.Group("vk_groups", {
                   mode: 0,
                   width: "500",
@@ -1007,13 +1006,13 @@
         <button class="project-application-modal__close-modal close-modal"></button>
       </span>
       <h3 class="project-application__heading form__heading">Заявка на проект</h3>
-      <form action="" class="form project-application-modal__form modal-form modal__form">
+      <form action="send.php" method="POST" class="form project-application-modal__form modal-form modal__form">
         <div class="input-container project-application-modal__input-container modal-form__input-container">
-          <input type="text" placeholder="Ваше имя" class="input project-application-modal__input">
+          <input type="text" name="name" placeholder="Ваше имя" class="input project-application-modal__input">
           <i class="fas fa-user-alt input-icon"></i>
         </div>
         <div class="input-container project-application-modal__input-container modal-form__input-container">
-          <input type="text" placeholder="Ваш номер телефона" class="input project-application-modal__input">
+          <input type="tel" name="phone" placeholder="Ваш номер телефона" class="input project-application-modal__input">
           <i class="fas fa-mobile-alt input-icon"></i>
         </div>
         <button class="button project-application-modal__submit modal__submit">Отправить заявку</button>
@@ -1025,13 +1024,13 @@
         <button class="business-proposal-modal__close-modal close-modal"></button>
       </span>
       <h3 class="business-proposal__heading form__heading">Коммерческое предложение</h3>
-      <form action="" class="form business-proposal-modal__form modal-form modal__form">
+      <form action="send.php" method="POST" class="form business-proposal-modal__form modal-form modal__form">
         <div class="input-container business-proposal-modal__input-container modal-form__input-container">
-          <input type="text" placeholder="Ваше имя" class="input business-proposal-modal__input">
+          <input type="text" name="name" placeholder="Ваше имя" class="input business-proposal-modal__input">
           <i class="fas fa-user-alt input-icon"></i>
         </div>
         <div class="input-container business-proposal-modal__input-container modal-form__input-container">
-          <input type="text" placeholder="Ваш номер телефона" class="input business-proposal-modal__input">
+          <input type="tel" name="phone" placeholder="Ваш номер телефона" class="input business-proposal-modal__input">
           <i class="fas fa-mobile-alt input-icon"></i>
         </div>
         <button class="button business-proposal-modal__submit modal__submit">Получить КП</button>
@@ -1125,13 +1124,13 @@
       <!-- /.everymonth-works__info -->
       <div class="form-container everymonth-works__form-container">
         <h3 class="everymonth-works__heading form__heading">Бесплатный аудит сайта</h3>
-        <form action="" class="form everymonth-works-modal__form modal-form modal__form">
+        <form action="send.php" method="POST" class="form everymonth-works-modal__form modal-form modal__form">
           <div class="input-container everymonth-works-modal__input-container modal-form__input-container">
-            <input type="text" placeholder="Ваше имя" class="input everymonth-works-modal__input">
+            <input type="text" name="name" placeholder="Ваше имя" class="input everymonth-works-modal__input">
             <i class="fas fa-user-alt input-icon"></i>
           </div>
           <div class="input-container everymonth-works-modal__input-container modal-form__input-container">
-            <input type="text" placeholder="Ваш номер телефона" class="input everymonth-works-modal__input">
+            <input type="tel" name="phone" placeholder="Ваш номер телефона" class="input everymonth-works-modal__input">
             <i class="fas fa-mobile-alt input-icon"></i>
           </div>
           <button class="button everymonth-works-modal__submit modal__submit">Заказать аудит сайта</button>
@@ -1140,11 +1139,13 @@
     </div>
   </div>
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=4346542a-9b28-45dc-b133-8e6e900b6d07&lang=ru_RU"></script>
   <script src="js/jquery-3.5.0.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/sliders.js"></script>
   <script src="js/ui.js"></script>
-  <script src="js/map.js"></script>
 
 </body>
 

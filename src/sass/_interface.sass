@@ -10,8 +10,8 @@
   margin: 0
   text-align: center
   text-transform: uppercase
-  font-family: "Roboto Bold" ,sans-serif
-  font-weight: normal
+  font-family: "Roboto" ,sans-serif
+  font-weight: 700
   font-size: 20px
   color: #243342
   &--light
@@ -34,7 +34,8 @@
   border-radius: 30px
   cursor: pointer
   background-color: $bright-color
-  font-family: "Roboto Bold", sans-serif
+  font-family: "Roboto", sans-serif
+  font-weight: 700
   color: #243342
 .menu-button
   position: relative
@@ -208,16 +209,38 @@
     padding-top: 23px
     padding-bottom: 17px
     text-align: center
-    font-family: "Roboro Medium", sans-serif
+    font-family: "Roboro", sans-serif
+    font-weight: 500
     font-size: 17px
     background-color: $bright-color
+span.invalid
+  position: absolute
+  top: -25px
+  left: 83px
+  padding: 9px 11px
+  padding-left: 15px
+  background-color: #E90000
+  color: #ffffff
+  font-family: "Roboto", sans-serif
+  font-size: 12px
+  font-weight: 300
+  &::after
+    content: ""
+    position: absolute
+    bottom: -20%
+    left: 25px
+    width: 12px
+    height: 14px
+    transform: skew(-60deg) rotate(50deg)
+    background-color: #E90000
 @media (min-width: 794px)
   .menu-button, .close-button
     display: none
 @media (min-width: 992px)
   .section-heading
     margin: auto
-    font-family: "Roboto Medium", sans-serif
+    font-family: "Roboto", sans-serif
+    font-weight: 500
     font-size: 30px
     &::before
       content: ""
@@ -344,7 +367,8 @@
     padding: 16px 50px
     padding-right: 0
     width: 100%
-    font-family: "Roboto Thin", sans-serif
+    font-family: "Roboto", sans-serif
+    font-weight: 100
     color: #606060
     &-container
       position: relative
@@ -398,3 +422,5 @@
     &-container
       top: -20px
       right: -20px
+  span.invalid
+    font-size: 14px
