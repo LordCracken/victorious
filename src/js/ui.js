@@ -31,7 +31,7 @@ $(document).ready(function () {
     $('.nav').removeClass('nav--active');
     $('.menu-button').removeClass('menu-button--active');
   });
-  // Модальные окна\
+  // Модальные окна
   function openModal(modalClass) {
     $('.modal-block').removeClass('modal-block--hidden');
     $(`.${modalClass}`).removeClass(`${modalClass}--hidden`);
