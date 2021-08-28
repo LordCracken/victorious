@@ -1,21 +1,28 @@
 {
-  "name": "renovation-of-apartments",
+  "name": "victorious",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Сайт по поисковому продвижению сайтов",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-minify": "^3.1.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordCracken/victorious.git"
   },
+  "author": "LordCracken",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LordCracken/victorious/issues"
+  },
+  "homepage": "https://github.com/LordCracken/victorious#readme",
   "dependencies": {
+    "gulp": "gulpjs/gulp.git#4.0"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^4.3.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-minify": "^3.1.0",
     "gulp-tinypng-compress": "^1.2.5"
   }
 }
