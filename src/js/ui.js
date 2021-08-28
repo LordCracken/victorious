@@ -6,8 +6,19 @@ $(document).ready(function () {
     $('.cost__text').toggleClass('cost__text--min-mod');
   });
   // Открытие и закрытие вопросов
-  $('.questions__question').on('click', () => {
-    $(event.target).next('.questions__answer').toggleClass('questions__answer--opened');
+  $('.questions__question').on('click', event => {
+    var questions = document.querySelectorAll('.questions__question');
+    questions.forEach(question => {
+      var target = event.target;
+      var targetClassesList = target.className.split(' ');
+      if (question === target && $.inArray('questions__answer--opened', targetClassesList) === -1) {
+        $(question).next('.questions__answer').addClass('questions__answer--opened');
+      } else if (question === target && $.inArray('questions__answer--opened', targetClassesList) !== -1) {
+        event.preventDefault();
+      } else {
+        $(question).next('.questions__answer').removeClass('questions__answer--opened');
+      }
+    });
   });
   // Бургер-меню
   $('.menu-button').on('click', () => {
