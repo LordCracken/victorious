@@ -20,47 +20,40 @@ $(document).ready(function () {
     $('.nav').removeClass('nav--active');
     $('.menu-button').removeClass('menu-button--active');
   });
-  // Модальные окна
-  $('.about-us__button').on('click', () => {
+  // Модальные окна\
+  function openModal(modalClass) {
     $('.modal-block').removeClass('modal-block--hidden');
-    $('.project-application-modal').removeClass('project-application-modal--hidden');
-  });
-  $('.project-application-modal__close-modal').on('click', () => {
-    $('.modal-block').addClass('modal-block--hidden');
-    $('.project-application-modal').addClass('project-application-modal--hidden');
-  });
+    $(`.${modalClass}`).removeClass(`${modalClass}--hidden`);
+    $('body').addClass('opened-modal');
+  }
 
-  $('.our-offer__button').on('click', () => {
-    $('.modal-block').removeClass('modal-block--hidden');
-    $('.business-proposal-modal').removeClass('business-proposal-modal--hidden');
-  });
-  $('.business-proposal-modal__close-modal').on('click', () => {
-    $('.modal-block').addClass('modal-block--hidden');
-    $('.business-proposal-modal').addClass('business-proposal-modal--hidden');
-  });
-
-  $('.rate__button').on('click', () => {
-    $('.modal-block').removeClass('modal-block--hidden');
-    $('.everymonth-works-modal').removeClass('everymonth-works-modal--hidden');
-  });
-  $('.everymonth-works-modal__close-modal').on('click', () => {
+  function closeModal() {
     $('.modal-block').addClass('modal-block--hidden');
     $('.everymonth-works-modal').addClass('everymonth-works-modal--hidden');
-  });
+    $('.business-proposal-modal').addClass('business-proposal-modal--hidden');
+    $('.project-application-modal').addClass('project-application-modal--hidden');
+    $('body').removeClass('opened-modal');
+  }
+
+  $('.about-us__button').on('click', () => openModal('project-application-modal'));
+  $('.contacts__button').on('click', () => openModal('project-application-modal'));
+  $('.project-application-modal__close-modal').on('click', () => closeModal());
+
+  $('.our-offer__button').on('click', () => openModal('business-proposal-modal'));
+  $('.business-proposal-modal__close-modal').on('click', () => closeModal());
+
+  $('.rate__button').on('click', () => openModal('everymonth-works-modal'));
+  $('.cost__button').on('click', () => openModal('everymonth-works-modal'));
+  $('.everymonth-works-modal__close-modal').on('click', () => closeModal());
+
   $(document).keyup(function (e) {
     if (e.key === 'Escape' || e.keyCode === 27) {
-      $('.modal-block').addClass('modal-block--hidden');
-      $('.everymonth-works-modal').addClass('everymonth-works-modal--hidden');
-      $('.business-proposal-modal').addClass('business-proposal-modal--hidden');
-      $('.project-application-modal').addClass('project-application-modal--hidden');
+      closeModal();
     }
   });
   $('.modal-block').on('click', (e) => {
     if (!$('.modal').is(e.target) && $('.modal').has(e.target).length === 0) {
-      $('.modal-block').addClass('modal-block--hidden');
-      $('.everymonth-works-modal').addClass('everymonth-works-modal--hidden');
-      $('.business-proposal-modal').addClass('business-proposal-modal--hidden');
-      $('.project-application-modal').addClass('project-application-modal--hidden');
+      closeModal();
     }
   });
   // Меню

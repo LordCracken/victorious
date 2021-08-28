@@ -711,6 +711,10 @@ html {
   max-width: 1140px;
 }
 
+.opened-modal {
+  overflow: hidden;
+}
+
 .section-heading {
   position: relative;
   margin: 0;
