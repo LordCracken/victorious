@@ -3053,6 +3053,7 @@ span.invalid::after {
     width: 100%;
     height: 250px;
     max-width: 500px;
+    overflow: scroll;
   }
 }
 
