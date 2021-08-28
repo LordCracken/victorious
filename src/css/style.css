@@ -932,6 +932,7 @@ html {
   border-radius: 30px;
   width: 100%;
   color: #606060;
+  background-color: #fff;
 }
 
 .modal-form__input-container .input-icon {
